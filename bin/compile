@@ -3,6 +3,14 @@
 # sync output
 $stdout.sync = true
 
+puts '**************************************************'
+puts 'BUILD_DIR or $1'
+puts `find #{ARGV[0]} | grep jq`
+puts '**************************************************'
+puts 'CACHE_DIR or $2'
+puts `find #{ARGV[1]} | grep jq`
+puts '**************************************************'
+
 $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
 require "language_pack/shell_helpers"
