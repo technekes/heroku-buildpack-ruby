@@ -11,8 +11,8 @@ puts '**************************************************'
 puts 'ENV'
 puts `env`
 puts '**************************************************'
-puts 'BUNDLE CONFIG'
-puts `bundle config`
+puts 'WHAT IS IN VENDOR BUNDLE'
+puts `find ./vendor/bundle`
 puts '**************************************************'
 puts 'BUILD_DIR or $1'
 puts `find #{ARGV[0]} | grep jq`
