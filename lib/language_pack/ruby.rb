@@ -603,7 +603,7 @@ WARNING
           env_vars["BUNDLER_LIB_PATH"] = "#{bundler_path}" if ruby_version.ruby_version == "1.8.7"
 
           ruby_jq_opts = "--with-opt-lib=#{build_path}/vendor/jq/lib --with-opt-include=#{build_path}/vendor/jq/include"
-          bundle_command = "bundle config build.ruby-jq #{ruby_jq_opts} bundle_command"
+          bundle_command = "bundle config build.ruby-jq #{ruby_jq_opts} #{bundle_command}"
 
           puts "Running: #{bundle_command}"
           instrument "ruby.bundle_install" do
