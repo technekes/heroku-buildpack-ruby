@@ -12,7 +12,7 @@ puts '(BUILD_DIR or $1)/.heroku'
 puts `find #{ARGV[0]}/.heroku | grep jq`
 puts '**************************************************'
 puts '/app/.heroku'
-puts `find /app/.heroku`
+puts `ls -la /app/.heroku/`
 puts '**************************************************'
 
 $:.unshift File.expand_path("../../lib", __FILE__)
