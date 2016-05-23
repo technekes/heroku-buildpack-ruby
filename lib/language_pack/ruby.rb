@@ -602,7 +602,7 @@ WARNING
           }
           env_vars["BUNDLER_LIB_PATH"] = "#{bundler_path}" if ruby_version.ruby_version == "1.8.7"
 
-          jq_dir=".heroku/vendor/jq/usr/local/"
+          jq_dir="/app/.heroku/vendor/jq/usr/local/"
           ruby_jq_opts = "--with-opt-lib=#{jq_dir}/lib --with-opt-include=#{jq_dir}/include"
           bundle_command = "bundle config build.ruby-jq #{ruby_jq_opts}; #{bundle_command}"
 

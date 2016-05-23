@@ -8,14 +8,8 @@ puts 'PWD'
 puts `pwd`
 puts `echo $PWD`
 puts '**************************************************'
-puts 'ENV'
-puts `env`
-puts '**************************************************'
-puts 'WHAT IS IN VENDOR BUNDLE'
-puts `find #{ARGV[0]}/vendor/bundle`
-puts '**************************************************'
-puts 'BUILD_DIR or $1'
-puts `find #{ARGV[0]} | grep jq`
+puts '(BUILD_DIR or $1)/.heroku'
+puts `find #{ARGV[0]/.heroku} | grep jq`
 
 $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
